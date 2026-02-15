@@ -57,8 +57,9 @@ async function addRojmelEntry(formData: FormData) {
 export default async function AddRojmelPage({
   searchParams,
 }: {
-  searchParams?: { error?: string }
+  searchParams?: Promise<{ error?: string }>
 }) {
+  const resolvedParams = await searchParams
   const { user, profile } = await getCurrentUserWithProfile()
 
   if (!user) {
@@ -74,7 +75,7 @@ export default async function AddRojmelPage({
   }
 
   const today = new Date().toISOString().slice(0, 10)
-  const error = searchParams?.error
+  const error = resolvedParams?.error
 
   return (
     <div className="mx-auto max-w-xl space-y-6">
