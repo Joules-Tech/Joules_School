@@ -1,7 +1,4 @@
 {
-  "/auth/register-school/page": "app/auth/register-school/page.js",
-  "/auth/signup/page": "app/auth/signup/page.js",
   "/auth/login/page": "app/auth/login/page.js",
-  "/dashboard/page": "app/dashboard/page.js",
   "/page": "app/page.js"
 }
