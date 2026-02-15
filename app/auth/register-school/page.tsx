@@ -1,6 +1,7 @@
 import { redirect } from 'next/navigation'
 import { createSupabaseServerClient } from '../../../lib/supabase-server'
 import { getCurrentUserWithProfile } from '../../../lib/auth'
+import { QueryAlert } from '../../components/QueryAlert'
 
 async function registerSchool(formData: FormData) {
   'use server'
@@ -30,7 +31,7 @@ async function registerSchool(formData: FormData) {
   redirect('/dashboard')
 }
 
-export default async function RegisterSchoolPage(props: any) {
+export default async function RegisterSchoolPage() {
   const { user, profile } = await getCurrentUserWithProfile()
 
   if (!user) {
@@ -41,16 +42,10 @@ export default async function RegisterSchoolPage(props: any) {
     redirect('/dashboard')
   }
 
-  const error = props.searchParams?.error as string | undefined
-
   return (
     <div className="mx-auto max-w-xl space-y-6">
       <h1 className="text-2xl font-semibold text-gray-900">Register School</h1>
-      {error && (
-        <div className="rounded-md border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">
-          {error}
-        </div>
-      )}
+      <QueryAlert />
       <form action={registerSchool} className="space-y-4">
         <div className="space-y-1">
           <label htmlFor="school_name" className="block text-sm font-medium text-gray-700">
