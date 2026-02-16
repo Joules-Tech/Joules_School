@@ -3,6 +3,7 @@ import type { NextRequest } from 'next/server'
 import { createServerClient } from '@supabase/ssr'
 
 const authPaths = ['/auth/login', '/auth/signup']
+const publicPaths = ['/', '/about', '/contact', '/careers', '/privacy', '/terms', '/security', '/support']
 
 export async function middleware(req: NextRequest) {
   const res = NextResponse.next({ request: { headers: req.headers } })
@@ -31,9 +32,9 @@ export async function middleware(req: NextRequest) {
 
   const url = req.nextUrl
   const isAuthPath = authPaths.some((p) => url.pathname.startsWith(p))
-  const isRoot = url.pathname === '/'
+  const isPublicPath = publicPaths.some((p) => url.pathname === p)
 
-  if (!user && !isAuthPath && !isRoot) {
+  if (!user && !isAuthPath && !isPublicPath) {
     const redirectUrl = req.nextUrl.clone()
     redirectUrl.pathname = '/auth/login'
     return NextResponse.redirect(redirectUrl)

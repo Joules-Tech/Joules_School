@@ -1,5 +1,50 @@
 {
-  "node": {},
+  "node": {
+    "40a3e6659babce2a2562a98a306b8280a0ff4b7f39": {
+      "workers": {
+        "app/auth/login/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Faryan%2FDocuments%2FGitHub%2FJoules_School%2Fapp%2Fauth%2Flogin%2Fpage.tsx%22%2C%5B%5B%2240a3e6659babce2a2562a98a306b8280a0ff4b7f39%22%2C%22%24%24RSC_SERVER_ACTION_0%22%5D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/auth/login/page": "rsc"
+      }
+    },
+    "003b03ca295a94347bdf55d8e39ba50c968faa954c": {
+      "workers": {
+        "app/dashboard/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Faryan%2FDocuments%2FGitHub%2FJoules_School%2Fapp%2Fdashboard%2Fpage.tsx%22%2C%5B%5B%22003b03ca295a94347bdf55d8e39ba50c968faa954c%22%2C%22%24%24RSC_SERVER_ACTION_0%22%5D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/dashboard/page": "rsc"
+      }
+    },
+    "406d01503c0f1df06428f0596e5c274a0d084631b2": {
+      "workers": {
+        "app/rojmel/add/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Faryan%2FDocuments%2FGitHub%2FJoules_School%2Fapp%2Frojmel%2Fadd%2Fpage.tsx%22%2C%5B%5B%22406d01503c0f1df06428f0596e5c274a0d084631b2%22%2C%22%24%24RSC_SERVER_ACTION_0%22%5D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/rojmel/add/page": "rsc"
+      }
+    },
+    "4015c6a2d5a6f1e8d6ce16a2a318b6dd5ee1edfd37": {
+      "workers": {
+        "app/auth/register-school/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Faryan%2FDocuments%2FGitHub%2FJoules_School%2Fapp%2Fauth%2Fregister-school%2Fpage.tsx%22%2C%5B%5B%224015c6a2d5a6f1e8d6ce16a2a318b6dd5ee1edfd37%22%2C%22%24%24RSC_SERVER_ACTION_0%22%5D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/auth/register-school/page": "rsc"
+      }
+    }
+  },
   "edge": {},
   "encryptionKey": "GfzSxTiz3dwqwn/45kArpRwUVMpAGQkS7CxMPwkxubk="
 }

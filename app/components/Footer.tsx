@@ -54,17 +54,17 @@ export default function Footer() {
                         <h4 className="text-sm font-semibold text-gray-900 mb-4 uppercase tracking-wider">Company</h4>
                         <ul className="space-y-3">
                             <li>
-                                <Link href="#about" className="text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                                <Link href="/about" className="text-sm text-gray-600 hover:text-blue-600 transition-colors">
                                     About Us
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#contact" className="text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                                <Link href="/contact" className="text-sm text-gray-600 hover:text-blue-600 transition-colors">
                                     Contact
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#careers" className="text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                                <Link href="/careers" className="text-sm text-gray-600 hover:text-blue-600 transition-colors">
                                     Careers
                                 </Link>
                             </li>
@@ -81,22 +81,22 @@ export default function Footer() {
                         <h4 className="text-sm font-semibold text-gray-900 mb-4 uppercase tracking-wider">Legal</h4>
                         <ul className="space-y-3">
                             <li>
-                                <Link href="#privacy" className="text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                                <Link href="/privacy" className="text-sm text-gray-600 hover:text-blue-600 transition-colors">
                                     Privacy Policy
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#terms" className="text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                                <Link href="/terms" className="text-sm text-gray-600 hover:text-blue-600 transition-colors">
                                     Terms of Service
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#security" className="text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                                <Link href="/security" className="text-sm text-gray-600 hover:text-blue-600 transition-colors">
                                     Security
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#support" className="text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                                <Link href="/support" className="text-sm text-gray-600 hover:text-blue-600 transition-colors">
                                     Support
                                 </Link>
                             </li>
