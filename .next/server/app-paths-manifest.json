@@ -1,8 +1,8 @@
 {
-  "/about/page": "app/about/page.js",
-  "/rojmel/add/page": "app/rojmel/add/page.js",
-  "/dashboard/page": "app/dashboard/page.js",
-  "/auth/register-school/page": "app/auth/register-school/page.js",
+  "/auth/login/page": "app/auth/login/page.js",
   "/page": "app/page.js",
-  "/auth/login/page": "app/auth/login/page.js"
+  "/privacy/page": "app/privacy/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/about/page": "app/about/page.js",
+  "/auth/register-school/page": "app/auth/register-school/page.js"
 }
