@@ -1,6 +1,7 @@
 import { redirect } from 'next/navigation'
 import { createSupabaseServerClient } from '../../../lib/supabase-server'
 import AuthLayout from '../../components/AuthLayout'
+import GoogleSignInButton from '../../components/GoogleSignInButton'
 import Link from 'next/link'
 
 async function signup(formData: FormData) {
@@ -74,6 +75,19 @@ export default async function SignupPage(props: any) {
             </div>
           </div>
         )}
+
+        {/* Google Sign-Up */}
+        <GoogleSignInButton label="Sign up with Google" />
+
+        {/* Divider */}
+        <div className="relative">
+          <div className="absolute inset-0 flex items-center">
+            <div className="w-full border-t border-gray-200"></div>
+          </div>
+          <div className="relative flex justify-center text-sm">
+            <span className="px-4 bg-white/80 text-gray-500">or sign up with email</span>
+          </div>
+        </div>
 
         {/* Signup Form */}
         <form action={signup} className="space-y-5">

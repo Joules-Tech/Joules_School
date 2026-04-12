@@ -1,50 +1,78 @@
 {
   "node": {
-    "40a3e6659babce2a2562a98a306b8280a0ff4b7f39": {
+    "40fb84741e92d1bd5a894430a893b6ee216fa8660a": {
+      "workers": {
+        "app/auth/forgot-password/page": {
+          "moduleId": 23821,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_ACTION_0",
+          "filename": "app/auth/forgot-password/page.tsx"
+        }
+      },
+      "filename": "app/auth/forgot-password/page.tsx",
+      "exportedName": "$$RSC_SERVER_ACTION_0"
+    },
+    "4019a680a90e32655f60f81d1775f971f439d23da1": {
       "workers": {
         "app/auth/login/page": {
-          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Faryan%2FDocuments%2FGitHub%2FJoules_School%2Fapp%2Fauth%2Flogin%2Fpage.tsx%22%2C%5B%5B%2240a3e6659babce2a2562a98a306b8280a0ff4b7f39%22%2C%22%24%24RSC_SERVER_ACTION_0%22%5D%5D%5D%5D&__client_imported__=!",
-          "async": false
+          "moduleId": 84228,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_ACTION_0",
+          "filename": "app/auth/login/page.tsx"
         }
       },
-      "layer": {
-        "app/auth/login/page": "rsc"
-      }
+      "filename": "app/auth/login/page.tsx",
+      "exportedName": "$$RSC_SERVER_ACTION_0"
     },
-    "003b03ca295a94347bdf55d8e39ba50c968faa954c": {
-      "workers": {
-        "app/dashboard/page": {
-          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Faryan%2FDocuments%2FGitHub%2FJoules_School%2Fapp%2Fdashboard%2Fpage.tsx%22%2C%5B%5B%22003b03ca295a94347bdf55d8e39ba50c968faa954c%22%2C%22%24%24RSC_SERVER_ACTION_0%22%5D%5D%5D%5D&__client_imported__=!",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/dashboard/page": "rsc"
-      }
-    },
-    "406d01503c0f1df06428f0596e5c274a0d084631b2": {
-      "workers": {
-        "app/rojmel/add/page": {
-          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Faryan%2FDocuments%2FGitHub%2FJoules_School%2Fapp%2Frojmel%2Fadd%2Fpage.tsx%22%2C%5B%5B%22406d01503c0f1df06428f0596e5c274a0d084631b2%22%2C%22%24%24RSC_SERVER_ACTION_0%22%5D%5D%5D%5D&__client_imported__=!",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/rojmel/add/page": "rsc"
-      }
-    },
-    "4015c6a2d5a6f1e8d6ce16a2a318b6dd5ee1edfd37": {
+    "40ecabfb801b0aa7d5506587fb32446fd61c39d206": {
       "workers": {
         "app/auth/register-school/page": {
-          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Faryan%2FDocuments%2FGitHub%2FJoules_School%2Fapp%2Fauth%2Fregister-school%2Fpage.tsx%22%2C%5B%5B%224015c6a2d5a6f1e8d6ce16a2a318b6dd5ee1edfd37%22%2C%22%24%24RSC_SERVER_ACTION_0%22%5D%5D%5D%5D&__client_imported__=!",
-          "async": false
+          "moduleId": 51005,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_ACTION_0",
+          "filename": "app/auth/register-school/page.tsx"
         }
       },
-      "layer": {
-        "app/auth/register-school/page": "rsc"
-      }
+      "filename": "app/auth/register-school/page.tsx",
+      "exportedName": "$$RSC_SERVER_ACTION_0"
+    },
+    "40b1ab2d573fd1a84c707ea38add40a75ad3ac74f2": {
+      "workers": {
+        "app/auth/signup/page": {
+          "moduleId": 14859,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_ACTION_0",
+          "filename": "app/auth/signup/page.tsx"
+        }
+      },
+      "filename": "app/auth/signup/page.tsx",
+      "exportedName": "$$RSC_SERVER_ACTION_0"
+    },
+    "003355122dfcdf19ab74437678dcfd984ff0bb1620": {
+      "workers": {
+        "app/dashboard/page": {
+          "moduleId": 44469,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_ACTION_0",
+          "filename": "app/dashboard/page.tsx"
+        }
+      },
+      "filename": "app/dashboard/page.tsx",
+      "exportedName": "$$RSC_SERVER_ACTION_0"
+    },
+    "40e81434ce8e07cb9bc98a25c0209a8b0777fd5cf9": {
+      "workers": {
+        "app/rojmel/add/page": {
+          "moduleId": 4925,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_ACTION_0",
+          "filename": "app/rojmel/add/page.tsx"
+        }
+      },
+      "filename": "app/rojmel/add/page.tsx",
+      "exportedName": "$$RSC_SERVER_ACTION_0"
     }
   },
   "edge": {},
-  "encryptionKey": "GfzSxTiz3dwqwn/45kArpRwUVMpAGQkS7CxMPwkxubk="
+  "encryptionKey": "EAERDiBDAVjDW0Ic4qDPW5wVMxST+dtVXkfEmak62OM="
 }

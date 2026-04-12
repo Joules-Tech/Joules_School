@@ -1,6 +1,7 @@
 import { redirect } from 'next/navigation'
 import { createSupabaseServerClient } from '../../../lib/supabase-server'
 import AuthLayout from '../../components/AuthLayout'
+import GoogleSignInButton from '../../components/GoogleSignInButton'
 import Link from 'next/link'
 
 async function login(formData: FormData) {
@@ -10,7 +11,7 @@ async function login(formData: FormData) {
 
   const supabase = await createSupabaseServerClient()
 
-  const { data, error } = await supabase.auth.signInWithPassword({
+  const { error } = await supabase.auth.signInWithPassword({
     email,
     password,
   })
@@ -65,6 +66,19 @@ export default async function LoginPage(props: any) {
           </div>
         )}
 
+        {/* Google Sign-In */}
+        <GoogleSignInButton label="Sign in with Google" />
+
+        {/* Divider */}
+        <div className="relative">
+          <div className="absolute inset-0 flex items-center">
+            <div className="w-full border-t border-gray-200"></div>
+          </div>
+          <div className="relative flex justify-center text-sm">
+            <span className="px-4 bg-white/80 text-gray-500">or sign in with email</span>
+          </div>
+        </div>
+
         {/* Login Form */}
         <form action={login} className="space-y-5">
           {/* Email */}
@@ -84,9 +98,17 @@ export default async function LoginPage(props: any) {
 
           {/* Password */}
           <div className="space-y-2">
-            <label htmlFor="password" className="block text-sm font-semibold text-gray-700">
-              Password
-            </label>
+            <div className="flex items-center justify-between">
+              <label htmlFor="password" className="block text-sm font-semibold text-gray-700">
+                Password
+              </label>
+              <Link
+                href="/auth/forgot-password"
+                className="text-xs text-blue-600 hover:text-blue-700 font-medium transition-colors"
+              >
+                Forgot password?
+              </Link>
+            </div>
             <input
               id="password"
               name="password"

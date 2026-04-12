@@ -1,8 +1,22 @@
 {
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about/page": "app/about/page.js",
+  "/auth/callback/route": "app/auth/callback/route.js",
+  "/auth/forgot-password/page": "app/auth/forgot-password/page.js",
   "/auth/login/page": "app/auth/login/page.js",
+  "/auth/register-school/page": "app/auth/register-school/page.js",
+  "/auth/reset-password/page": "app/auth/reset-password/page.js",
+  "/auth/signup/page": "app/auth/signup/page.js",
+  "/careers/page": "app/careers/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
   "/page": "app/page.js",
   "/privacy/page": "app/privacy/page.js",
-  "/dashboard/page": "app/dashboard/page.js",
-  "/about/page": "app/about/page.js",
-  "/auth/register-school/page": "app/auth/register-school/page.js"
+  "/rojmel/add/page": "app/rojmel/add/page.js",
+  "/rojmel/page": "app/rojmel/page.js",
+  "/security/page": "app/security/page.js",
+  "/settings/users/page": "app/settings/users/page.js",
+  "/support/page": "app/support/page.js",
+  "/terms/page": "app/terms/page.js"
 }

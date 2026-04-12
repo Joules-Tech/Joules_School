@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import LanguageToggle from './LanguageToggle';
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -49,8 +50,9 @@ export default function Navigation() {
             </Link>
           </div>
 
-          {/* Right Side - Auth Buttons */}
+          {/* Right Side - Language + Auth Buttons */}
           <div className="flex items-center space-x-3">
+            <LanguageToggle />
             <Link
               href="/auth/login"
               className="hidden sm:inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-gray-700 hover:text-gray-900 transition-colors duration-200"
