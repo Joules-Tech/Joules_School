@@ -49,6 +49,7 @@ export default function Sidebar({ user, role, lang, active }: SidebarProps) {
         {item('/dashboard', tr.dashboard)}
         {item('/rojmel', tr.rojmel)}
         {isOwnerOrAccountant && item('/rojmel/add', tr.addEntry)}
+        {isOwnerOrAccountant && item('/rojmel/import', tr.importEntry)}
 
         {/* Divider */}
         <div className="my-1.5 border-t border-gray-100" />
