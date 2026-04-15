@@ -1,6 +1,107 @@
 {
-  "app": {},
-  "appUsingSizeAdjust": false,
+  "app": {
+    "[project]/app/_not-found/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
+    "[project]/app/about/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
+    "[project]/app/auth/forgot-password/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
+    "[project]/app/auth/login/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
+    "[project]/app/auth/register-school/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
+    "[project]/app/auth/reset-password/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
+    "[project]/app/auth/signup/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
+    "[project]/app/careers/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
+    "[project]/app/contact/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
+    "[project]/app/dashboard/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
+    "[project]/app/khatavahi/add-account/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
+    "[project]/app/khatavahi/import/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
+    "[project]/app/khatavahi/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
+    "[project]/app/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
+    "[project]/app/privacy/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
+    "[project]/app/rojmel/[id]/edit/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
+    "[project]/app/rojmel/add/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
+    "[project]/app/rojmel/import/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
+    "[project]/app/rojmel/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
+    "[project]/app/rojmel/print/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
+    "[project]/app/security/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
+    "[project]/app/settings/users/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
+    "[project]/app/settings/year-balances/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
+    "[project]/app/support/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
+    "[project]/app/terms/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
   "pages": {},
   "pagesUsingSizeAdjust": false
 }

@@ -10,6 +10,7 @@ import Sidebar from '../../components/Sidebar'
 import AccountSelectorWithAdd from '../../components/AccountSelectorWithAdd'
 import LiveEntriesPanel from '../../components/LiveEntriesPanel'
 import DeleteEntryButton from '../../components/DeleteEntryButton'
+import SpreadsheetDescriptionEditor from '../../components/SpreadsheetDescriptionEditor'
 
 // ─── INSERT ────────────────────────────────────────────────────────────────────
 
@@ -356,17 +357,12 @@ export default async function AddRojmelPage(props: any) {
                     className="w-full rounded-xl border border-gray-300 px-4 py-2.5 text-sm shadow-sm placeholder:text-gray-400 focus:border-[#9C43A6] focus:outline-none focus:ring-2 focus:ring-[#9C43A6]/20"
                   />
                 </div>
-                <div className="space-y-1.5">
-                  <label htmlFor="description_detail" className="block text-sm font-medium text-gray-500">
-                    {tr.descriptionDetailLabel}
-                  </label>
-                  <textarea
-                    id="description_detail" name="description_detail" rows={2}
-                    defaultValue={isEditMode ? (editEntry!.description_detail || '') : ''}
-                    placeholder={lang === 'gu' ? 'વધુ વિગત (વૈકલ્પિક)…' : 'Additional details (optional)…'}
-                    className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-2.5 text-sm shadow-sm placeholder:text-gray-400 focus:border-[#9C43A6] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#9C43A6]/20"
-                  />
-                </div>
+                <SpreadsheetDescriptionEditor
+                  key={editId || 'new'}
+                  name="description_detail"
+                  defaultValue={isEditMode ? (editEntry!.description_detail || '') : ''}
+                  lang={lang}
+                />
               </div>
 
               {/* Amount + Payment mode */}

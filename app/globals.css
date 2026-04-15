@@ -32,10 +32,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  /* Warm app background so no white flash on scroll or short pages */
+  background-color: #FFF7F4;
 }
 
 body {
-  background: var(--primary-bg);
+  background-color: #FFF7F4;
   color: var(--text-primary);
   position: relative;
 }

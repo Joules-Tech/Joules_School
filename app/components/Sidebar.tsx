@@ -56,6 +56,7 @@ export default function Sidebar({ user, role, lang, active }: SidebarProps) {
 
         {item('/khatavahi', tr.khatavahi)}
         {isOwnerOrAccountant && item('/khatavahi/add-account', tr.addAccount)}
+        {isOwnerOrAccountant && item('/khatavahi/import', tr.importAccounts)}
 
         {/* Divider */}
         <div className="my-1.5 border-t border-gray-100" />

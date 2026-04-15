@@ -54,33 +54,9 @@ export default async function KhatavahiPage(props: any) {
     }
   }
 
-  // Running balance
-  type EntryWithBalance = {
-    id: string
-    entry_date: string
-    description: string
-    description_detail: string
-    payment_mode: string
-    entry_type: 'IN' | 'OUT'
-    amount: number
-    page_no: string
-    account_no: string
-    balance: number
-  }
-
-  let runningBalance = 0
-  const rows: EntryWithBalance[] = entries.map(e => {
-    const amt = Number(e.amount)
-    if (e.entry_type === 'IN') {
-      runningBalance += amt
-    } else {
-      runningBalance -= amt
-    }
-    return { ...e, amount: amt, balance: runningBalance }
-  })
-
   const totalJama  = entries.filter(e => e.entry_type === 'IN' ).reduce((s, e) => s + Number(e.amount), 0)
   const totalUdhar = entries.filter(e => e.entry_type === 'OUT').reduce((s, e) => s + Number(e.amount), 0)
+  const rows = entries.map(e => ({ ...e, amount: Number(e.amount) }))
 
   const fys   = availableFYs(5)
   const isOwnerOrAccountant = ['owner', 'accountant'].includes(profile.role)
@@ -224,9 +200,8 @@ export default async function KhatavahiPage(props: any) {
             {/* Summary pills */}
             <div className="flex gap-3 border-b border-gray-100 bg-gray-50/50 px-5 py-2.5">
               {[
-                { label: lang === 'gu' ? 'કુલ જમા' : 'Total Jama (Cr)', value: `₹${fmt(totalJama)}`, color: 'text-emerald-700 bg-emerald-50 border-emerald-200' },
-                { label: lang === 'gu' ? 'કુલ ઉધાર' : 'Total Udhar (Dr)', value: `₹${fmt(totalUdhar)}`, color: 'text-red-700 bg-red-50 border-red-200' },
-                { label: lang === 'gu' ? 'અંતિમ શિલક' : 'Closing Balance', value: `₹${fmt(runningBalance)} ${runningBalance >= 0 ? '(Cr)' : '(Dr)'}`, color: runningBalance >= 0 ? 'text-emerald-800 bg-emerald-50 border-emerald-200' : 'text-red-800 bg-red-50 border-red-200' },
+                { label: lang === 'gu' ? 'કુલ જમા' : 'Total Jama', value: `₹${fmt(totalJama)}`, color: 'text-emerald-700 bg-emerald-50 border-emerald-200' },
+                { label: lang === 'gu' ? 'કુલ ઉધાર' : 'Total Udhar', value: `₹${fmt(totalUdhar)}`, color: 'text-red-700 bg-red-50 border-red-200' },
                 { label: lang === 'gu' ? 'કુલ નોંધ' : 'Entries', value: String(rows.length), color: 'text-violet-700 bg-violet-50 border-violet-200' },
               ].map(p => (
                 <div key={p.label} className={`flex items-center gap-1.5 rounded-xl border px-3 py-1 text-xs ${p.color}`}>
@@ -237,13 +212,12 @@ export default async function KhatavahiPage(props: any) {
             </div>
 
             {/* Column headers */}
-            <div className="grid grid-cols-[70px_1fr_80px_90px_90px_90px] gap-0 border-b border-gray-100 bg-gray-50 px-4 py-2 text-[10px] font-semibold uppercase tracking-wider text-gray-400">
+            <div className="grid grid-cols-[70px_1fr_80px_100px_100px] gap-0 border-b border-gray-100 bg-gray-50 px-4 py-2 text-[10px] font-semibold uppercase tracking-wider text-gray-400">
               <span>{tr.date}</span>
               <span>{tr.description}</span>
               <span className="text-center">{tr.pageNo}</span>
               <span className="text-right text-red-500">{tr.debitCol}</span>
               <span className="text-right text-emerald-600">{tr.creditCol}</span>
-              <span className="text-right text-violet-600">{tr.runningBalance}</span>
             </div>
 
             {/* Entries */}
@@ -253,32 +227,28 @@ export default async function KhatavahiPage(props: any) {
                 return (
                   <div
                     key={e.id}
-                    className={`grid grid-cols-[70px_1fr_80px_90px_90px_90px] gap-0 px-4 py-2.5 text-sm ${
+                    className={`grid grid-cols-[70px_1fr_80px_100px_100px] gap-0 px-4 py-2.5 text-sm ${
                       idx % 2 === 0 ? 'bg-white' : 'bg-gray-50/40'
                     }`}
                   >
-                    <span className="text-xs text-gray-500 font-mono self-center">{formatDate(e.entry_date)}</span>
-                    <div className="min-w-0 self-center">
+                    <span className="text-xs text-gray-500 font-mono self-start pt-0.5">{formatDate(e.entry_date)}</span>
+                    <div className="min-w-0">
                       <p className="text-xs font-semibold text-gray-800 truncate leading-snug">{e.description || '—'}</p>
                       {e.description_detail && (
                         <p className="text-[10px] text-gray-500 italic truncate mt-0.5">{e.description_detail}</p>
                       )}
                       <p className="text-[10px] text-gray-400 mt-0.5">{e.payment_mode}</p>
                     </div>
-                    <span className="text-center text-xs text-gray-400 self-center">{e.page_no || ''}</span>
-                    <span className="text-right text-xs self-center font-mono">
+                    <span className="text-center text-xs text-gray-400 self-start pt-0.5">{e.page_no || ''}</span>
+                    <span className="text-right text-xs self-start pt-0.5 font-mono">
                       {!isCredit
                         ? <span className="font-semibold text-red-600">{fmt(e.amount)}</span>
                         : <span className="text-gray-200">—</span>}
                     </span>
-                    <span className="text-right text-xs self-center font-mono">
+                    <span className="text-right text-xs self-start pt-0.5 font-mono">
                       {isCredit
                         ? <span className="font-semibold text-emerald-600">{fmt(e.amount)}</span>
                         : <span className="text-gray-200">—</span>}
-                    </span>
-                    <span className={`text-right text-xs font-bold font-mono self-center ${e.balance >= 0 ? 'text-emerald-700' : 'text-red-700'}`}>
-                      {fmt(e.balance)}
-                      <span className="text-[9px] font-medium ml-0.5 opacity-70">{e.balance >= 0 ? 'Cr' : 'Dr'}</span>
                     </span>
                   </div>
                 )
@@ -286,16 +256,12 @@ export default async function KhatavahiPage(props: any) {
             </div>
 
             {/* Totals footer */}
-            <div className="grid grid-cols-[70px_1fr_80px_90px_90px_90px] gap-0 border-t-2 border-gray-200 bg-gray-50 px-4 py-3">
+            <div className="grid grid-cols-[70px_1fr_80px_100px_100px] gap-0 border-t-2 border-gray-200 bg-gray-50 px-4 py-3">
               <span className="text-xs font-bold text-gray-600 col-span-3">
                 {lang === 'gu' ? 'કુલ સરવાળો' : 'Total'}
               </span>
               <span className="text-right text-xs font-bold text-red-700 font-mono">{fmt(totalUdhar)}</span>
               <span className="text-right text-xs font-bold text-emerald-700 font-mono">{fmt(totalJama)}</span>
-              <span className={`text-right text-xs font-bold font-mono ${runningBalance >= 0 ? 'text-emerald-800' : 'text-red-800'}`}>
-                {fmt(runningBalance)}
-                <span className="text-[9px] font-medium ml-0.5">{runningBalance >= 0 ? 'Cr' : 'Dr'}</span>
-              </span>
             </div>
           </div>
         )}

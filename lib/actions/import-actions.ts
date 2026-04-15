@@ -60,3 +60,60 @@ export async function importRojmelEntries(
 
   return { imported: totalInserted, error: null }
 }
+
+export type ImportAccountRow = {
+  account_number: string
+  account_name: string
+}
+
+export async function importAccounts(
+  rows: ImportAccountRow[]
+): Promise<{ created: number; skipped: number; error: string | null }> {
+  if (!rows.length) return { created: 0, skipped: 0, error: 'No rows to import' }
+
+  const supabase = await createSupabaseServerClient()
+  const { data: { user } } = await supabase.auth.getUser()
+  if (!user) return { created: 0, skipped: 0, error: 'Not authenticated' }
+
+  const { data: profile } = await supabase
+    .from('profiles')
+    .select('school_id, role')
+    .eq('id', user.id)
+    .single()
+
+  if (!profile?.school_id) return { created: 0, skipped: 0, error: 'No school found' }
+  if (!['owner', 'accountant'].includes(profile.role)) {
+    return { created: 0, skipped: 0, error: 'Not authorized' }
+  }
+
+  // Fetch existing account numbers to detect duplicates
+  const admin = createSupabaseAdminClient()
+  const { data: existing } = await admin
+    .from('accounts')
+    .select('account_number')
+    .eq('school_id', profile.school_id)
+
+  const existingNums = new Set((existing || []).map(a => a.account_number.trim().toLowerCase()))
+
+  const toInsert = rows.filter(r => !existingNums.has(r.account_number.trim().toLowerCase()))
+  const skipped  = rows.length - toInsert.length
+
+  if (!toInsert.length) return { created: 0, skipped, error: null }
+
+  const insertData = toInsert.map(row => ({
+    school_id:      profile.school_id,
+    account_number: row.account_number.trim(),
+    account_name:   row.account_name.trim(),
+  }))
+
+  const BATCH = 500
+  let created = 0
+  for (let i = 0; i < insertData.length; i += BATCH) {
+    const batch = insertData.slice(i, i + BATCH)
+    const { error } = await admin.from('accounts').insert(batch)
+    if (error) return { created, skipped, error: error.message }
+    created += batch.length
+  }
+
+  return { created, skipped, error: null }
+}

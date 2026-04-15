@@ -7,6 +7,7 @@ import { t, currentFY, fyStartDate } from '../../lib/translations'
 import LanguageToggle from '../components/LanguageToggle'
 import Sidebar from '../components/Sidebar'
 import BalanceModeToggle from '../components/BalanceModeToggle'
+import DetailTablePreview from '../components/DetailTablePreview'
 
 export default async function RojmelPage(props: any) {
   const [{ user, profile }, lang] = await Promise.all([
@@ -223,7 +224,7 @@ export default async function RojmelPage(props: any) {
                     <div className="min-w-0">
                       <p className="text-gray-900 truncate text-xs font-medium leading-snug">{e.description || '—'}</p>
                       {e.description_detail && (
-                        <p className="text-[10px] text-gray-500 truncate mt-0.5 italic">{e.description_detail}</p>
+                        <DetailTablePreview detail={e.description_detail} lang={lang} />
                       )}
                       <p className="text-[10px] text-gray-400 mt-0.5">{e.payment_mode}</p>
                     </div>
@@ -304,7 +305,7 @@ export default async function RojmelPage(props: any) {
                     <div className="min-w-0">
                       <p className="text-gray-900 truncate text-xs font-medium leading-snug">{e.description || '—'}</p>
                       {e.description_detail && (
-                        <p className="text-[10px] text-gray-500 truncate mt-0.5 italic">{e.description_detail}</p>
+                        <DetailTablePreview detail={e.description_detail} lang={lang} />
                       )}
                       <p className="text-[10px] text-gray-400 mt-0.5">{e.payment_mode}</p>
                     </div>

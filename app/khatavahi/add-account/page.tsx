@@ -135,7 +135,15 @@ export default async function AddAccountPage(props: any) {
               {lang === 'gu' ? 'ખાતાવહી માટે ખાતાઓ ઉમેરો' : 'Add accounts used in Khatavahi'}
             </p>
           </div>
-          <LanguageToggle />
+          <div className="flex items-center gap-3">
+            <a
+              href="/khatavahi/import"
+              className="rounded-xl border border-violet-200 bg-violet-50 px-4 py-2 text-sm font-medium text-violet-700 hover:bg-violet-100 transition-colors"
+            >
+              ↑ {lang === 'gu' ? 'ખાતા આયાત' : 'Bulk Import'}
+            </a>
+            <LanguageToggle />
+          </div>
         </div>
 
         {/* Toast messages */}

@@ -117,6 +117,11 @@ export const translations = {
 
     // Import
     importEntry: 'Import Entries',
+    importAccounts: 'Import Accounts',
+    importAccountsTitle: 'Import Accounts (Khata)',
+    importAccountsSubtitle: 'Upload an Excel or CSV file to bulk-create accounts',
+    importAccountsSuccess: (n: number) => `${n} account${n === 1 ? '' : 's'} created!`,
+    importAccountsSkipped: (n: number) => `${n} skipped (already exist)`,
     importTitle: 'Import Rojmel Entries',
     importSubtitle: 'Upload an Excel or CSV file to bulk-import historical entries',
     downloadTemplate: 'Download Template',
@@ -265,6 +270,11 @@ export const translations = {
 
     // Import
     importEntry: 'નોંધ આયાત',
+    importAccounts: 'ખાતા આયાત',
+    importAccountsTitle: 'ખાતા (ખાતાવહી) આયાત',
+    importAccountsSubtitle: 'Excel અથવા CSV ફ઼ાઇલ અપલોડ કરી ખાતા બનાવો',
+    importAccountsSuccess: (n: number) => `${n} ખાતા સફળ!`,
+    importAccountsSkipped: (n: number) => `${n} છોડ્યા (પહેલેથી છે)`,
     importTitle: 'રોજમેળ નોંધ આયાત',
     importSubtitle: 'Excel અથવા CSV ફ઼ાઇલ અપલોડ કરી જૂની નોંધ ઉમેરો',
     downloadTemplate: 'ટેમ્પ્લેટ ડાઉનલોડ',

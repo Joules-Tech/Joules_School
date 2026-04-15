@@ -28,10 +28,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${notoSans.variable} ${notoGujarati.variable}`}>
+    <html lang="en" className={`${notoSans.variable} ${notoGujarati.variable}`} suppressHydrationWarning>
       <body
         className="min-h-screen"
         style={{ fontFamily: 'var(--font-noto-gujarati), var(--font-noto-sans), sans-serif' }}
+        suppressHydrationWarning
       >
         {children}
       </body>

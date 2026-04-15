@@ -3,6 +3,7 @@
 import { useState, useEffect, useTransition, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { getEntriesForDate, EntryRow } from '../../lib/actions/entry-actions'
+import DetailTablePreview from './DetailTablePreview'
 
 type Props = {
   initialDate: string
@@ -154,9 +155,7 @@ export default function LiveEntriesPanel({ initialDate, initialType, lang, editi
                           {e.description || '—'}
                         </p>
                         {e.description_detail && (
-                          <p className="text-[10px] text-gray-400 italic truncate mt-0.5">
-                            {e.description_detail}
-                          </p>
+                          <DetailTablePreview detail={e.description_detail} lang={lang} />
                         )}
                         <div className="flex items-center gap-2 mt-1">
                           <span className={`rounded-md px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wide ${
