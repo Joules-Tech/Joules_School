@@ -56,7 +56,7 @@ export default async function DashboardPage() {
   const isOwner = profile?.role === 'owner'
 
   return (
-    <div className="flex h-full flex-1 min-h-screen">
+    <div className="flex min-h-screen">
       <Sidebar user={user} role={profile?.role || 'viewer'} lang={lang} active="/dashboard" />
 
       {/* ── Main content ── */}

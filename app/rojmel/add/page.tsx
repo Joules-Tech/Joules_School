@@ -11,6 +11,7 @@ import AccountSelectorWithAdd from '../../components/AccountSelectorWithAdd'
 import LiveEntriesPanel from '../../components/LiveEntriesPanel'
 import DeleteEntryButton from '../../components/DeleteEntryButton'
 import SpreadsheetDescriptionEditor from '../../components/SpreadsheetDescriptionEditor'
+import BillReceiptPicker from '../../components/BillReceiptPicker'
 
 // ─── INSERT ────────────────────────────────────────────────────────────────────
 
@@ -216,7 +217,7 @@ export default async function AddRojmelPage(props: any) {
   const panelType = (editEntry?.entry_type || (preType === 'OUT' ? 'OUT' : 'IN')) as 'IN' | 'OUT'
 
   return (
-    <div className="flex h-full flex-1 min-h-screen">
+    <div className="flex min-h-screen">
       <Sidebar user={user} role={profile.role} lang={lang} active="/rojmel/add" />
 
       <main className="flex flex-1 flex-col bg-[#FFF7F4]/80 px-4 py-5 sm:px-6 lg:px-8 min-h-0">
@@ -396,12 +397,13 @@ export default async function AddRojmelPage(props: any) {
               {/* Receipt No. + Account dropdown */}
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="space-y-2">
-                  <label htmlFor="page_no" className="block text-sm font-semibold text-gray-700">{tr.pageNoLabel}</label>
-                  <input
-                    id="page_no" name="page_no" type="text"
+                  <label className="block text-sm font-semibold text-gray-700">{tr.pageNoLabel}</label>
+                  <BillReceiptPicker
+                    key={editId || 'new'}
+                    name="page_no"
                     defaultValue={isEditMode ? (editEntry!.page_no || '') : ''}
-                    placeholder={lang === 'gu' ? 'ઉદા. 42' : 'e.g. 42'}
-                    className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm shadow-sm placeholder:text-gray-400 focus:border-[#9C43A6] focus:outline-none focus:ring-2 focus:ring-[#9C43A6]/20"
+                    lang={lang}
+                    schoolId={profile.school_id}
                   />
                 </div>
                 <div className="space-y-2">

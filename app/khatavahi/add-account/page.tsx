@@ -122,7 +122,7 @@ export default async function AddAccountPage(props: any) {
   const editingAccount = editId ? (accounts || []).find(a => a.id === editId) : null
 
   return (
-    <div className="flex h-full flex-1 min-h-screen">
+    <div className="flex min-h-screen">
       <Sidebar user={user} role={profile.role} lang={lang} active="/khatavahi/add-account" />
 
       <main className="flex flex-1 flex-col bg-[#FFF7F4]/80 px-4 py-5 sm:px-6 lg:px-8">

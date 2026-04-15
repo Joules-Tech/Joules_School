@@ -135,7 +135,7 @@ export default async function EditEntryPage(props: any) {
   const error = searchParams?.error as string | undefined
 
   return (
-    <div className="flex h-full flex-1 min-h-screen">
+    <div className="flex min-h-screen">
       <Sidebar user={user} role={profile.role} lang={lang} active="/rojmel" />
 
       {/* Main */}

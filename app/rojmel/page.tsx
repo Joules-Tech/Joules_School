@@ -98,7 +98,7 @@ export default async function RojmelPage(props: any) {
   const fmt = (n: number) => n.toLocaleString('en-IN', { minimumFractionDigits: 2 })
 
   return (
-    <div className="flex h-full flex-1 min-h-screen">
+    <div className="flex min-h-screen">
       <Sidebar user={user} role={profile.role} lang={lang} active="/rojmel" />
 
       {/* Main */}

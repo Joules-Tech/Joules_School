@@ -90,7 +90,7 @@ export default async function YearBalancesPage(props: any) {
     .single()
 
   return (
-    <div className="flex h-full flex-1 min-h-screen">
+    <div className="flex min-h-screen">
       <Sidebar user={user} role={profile.role} lang={lang} active="/settings/year-balances" />
 
       {/* Main */}

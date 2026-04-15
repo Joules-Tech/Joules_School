@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${notoSans.variable} ${notoGujarati.variable}`} suppressHydrationWarning>
       <body
-        className="min-h-screen"
+        className="h-full"
         style={{ fontFamily: 'var(--font-noto-gujarati), var(--font-noto-sans), sans-serif' }}
         suppressHydrationWarning
       >
