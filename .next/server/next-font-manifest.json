@@ -28,6 +28,18 @@
       "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
       "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
     ],
+    "[project]/app/bills/[id]/edit/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
+    "[project]/app/bills/add/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
+    "[project]/app/bills/page": [
+      "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
+      "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"
+    ],
     "[project]/app/careers/page": [
       "static/media/dc6d2a64e9dbf3bc-s.p.11~i--ovv74c_.woff2",
       "static/media/c1bab3a3f48d75c0-s.p.0ge9y-p_.19ad.woff2"

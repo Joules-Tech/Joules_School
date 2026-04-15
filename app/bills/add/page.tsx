@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useTransition } from 'react'
+import { useState, useEffect, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { supabaseBrowserClient } from '../../../lib/supabase-client'
@@ -35,17 +35,19 @@ export default function AddBillPage() {
   const [lang,        setLangState]   = useState<'en' | 'gu'>('en')
 
   // Load profile on mount
-  useState(() => {
+  useEffect(() => {
     supabaseBrowserClient.auth.getUser().then(async ({ data: { user } }) => {
       if (!user) { router.push('/auth/login'); return }
       const { data: p } = await supabaseBrowserClient
         .from('profiles').select('*').eq('id', user.id).single()
       setProfile(p)
     })
-    // lang from cookie
-    const l = document.cookie.match(/lang=([^;]+)/)?.[1]
-    if (l === 'gu') setLangState('gu')
-  })
+    // lang from cookie (browser-only)
+    if (typeof document !== 'undefined') {
+      const l = document.cookie.match(/lang=([^;]+)/)?.[1]
+      if (l === 'gu') setLangState('gu')
+    }
+  }, [])
 
   const isGu = lang === 'gu'
   const PRESET_CATEGORIES = isGu

@@ -10,6 +10,6 @@ R.c("server/chunks/ssr/node_modules_next_dist_client_components_builtin_unauthor
 R.c("server/chunks/ssr/node_modules_next_dist_client_components_builtin_global-error_0lgvd_..js")
 R.c("server/chunks/ssr/_0hbodjb._.js")
 R.c("server/chunks/ssr/_0u3ie5y._.js")
-R.c("server/chunks/ssr/_0s.7k4p._.js")
+R.c("server/chunks/ssr/_050j5_3._.js")
 R.m(48788)
 module.exports=R.m(48788).exports
